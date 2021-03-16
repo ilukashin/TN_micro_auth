@@ -1,0 +1,15 @@
+ru:
+  model:
+    errors:
+      user:
+        name:
+          blank: пустое имя
+          format: Укажите имя, используя буквы, цифры или символ подчёркивания
+        email:
+          blank: пустой email
+        password:
+          blank: пустой пароль
+
+      user_session:
+        uuid:
+          blank: пустой uuid

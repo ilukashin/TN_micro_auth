@@ -6,6 +6,8 @@ ru:
           blank:
         email:
           blank:
+        password:
+          blank:
 
       user_session:
         uuid:
