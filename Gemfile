@@ -18,6 +18,7 @@ gem 'dry-validation'
 
 gem 'rake'
 
+gem 'jwt'
 gem 'i18n'
 gem 'fast_jsonapi'
 gem 'activesupport', require: false
