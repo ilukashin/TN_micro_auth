@@ -1,5 +1,7 @@
+# frozen_string_literal: true
+
 class User < Sequel::Model
-  NAME_FORMAT = %r{\A\w+\z}
+  NAME_FORMAT = /\A\w+\z/
 
   one_to_many :sessions, class: :UserSession
 
@@ -12,7 +14,6 @@ class User < Sequel::Model
     validates_presence :email, message: I18n.t(:blank, scope: 'model.errors.user.email')
     validates_presence :password_digest, message: I18n.t(:blank, scope: 'model.errors.user.password')
   end
-  
 
   def authenticate(password)
     password_digest.eql?(password)

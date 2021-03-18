@@ -1,6 +1,7 @@
+# frozen_string_literal: true
+
 class UserSessionRoutes < Application
   namespace '/v1' do
-    
     post do
       session_params = validate_with(UserSessionParamsContract)
 

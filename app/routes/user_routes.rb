@@ -1,6 +1,7 @@
+# frozen_string_literal: true
+
 class UserRoutes < Application
   namespace '/v1' do
-    
     post do
       user_params = validate_with(UserParamsContract)
 
@@ -8,11 +9,10 @@ class UserRoutes < Application
 
       if result.success?
         status 201
-      else      
+      else
         status 422
         error_response result.user
       end
-
     end
   end
 end

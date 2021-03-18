@@ -1,3 +1,5 @@
+# frozen_string_literal: true
+
 class UserParamsContract < Dry::Validation::Contract
   params do
     required(:name).value(:string)

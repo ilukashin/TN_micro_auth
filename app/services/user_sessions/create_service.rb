@@ -1,9 +1,11 @@
+# frozen_string_literal: true
+
 module UserSessions
   class CreateService
     prepend BasicService
 
     param :email
-    param :password_digest 
+    param :password_digest
     option :user, default: proc { User.first(email: @email) }, reader: false
 
     attr_reader :session

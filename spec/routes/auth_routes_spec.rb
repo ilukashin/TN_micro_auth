@@ -1,5 +1,6 @@
-RSpec.describe AuthRoutes, type: :routes do
+# frozen_string_literal: true
 
+RSpec.describe AuthRoutes, type: :routes do
   describe 'POST /' do
     context 'valid token' do
       let(:user) { create(:user) }

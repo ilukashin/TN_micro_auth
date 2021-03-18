@@ -1,3 +1,5 @@
+# frozen_string_literal: true
+
 class UserSession < Sequel::Model
   plugin :uuid
 
@@ -8,5 +10,4 @@ class UserSession < Sequel::Model
 
     validates_presence :uuid, message: I18n.t(:blank, scope: 'model.errors.user_session.uuid')
   end
-  
 end

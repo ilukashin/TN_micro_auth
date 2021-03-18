@@ -1,6 +1,8 @@
+# frozen_string_literal: true
+
 class Application < Sinatra::Base
   helpers Validations
-  
+
   configure do
     register Sinatra::Namespace
     register ApiErrors
@@ -13,5 +15,4 @@ class Application < Sinatra::Base
 
     set :show_exeptions, false
   end
-  
 end

@@ -1,5 +1,7 @@
+# frozen_string_literal: true
+
 module JwtEncoder
-  extend self
+  module_function
 
   HMAC_SECRET = Settings.app.secret
   def encode(payload)
