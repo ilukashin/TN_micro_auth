@@ -7,8 +7,8 @@ RSpec.describe AuthRoutes, type: :routes do
       let(:session) { create(:user_session, user: user) }
 
       it 'returns corresponding user' do
-        header 'Authorization', session.uuid
-        post '/v1'
+        header 'Authorization', auth_token(user)
+        post '/'
 
         expect(last_response.status).to eq(200)
         expect(response_body['meta']).to eq('user_id' => user.id)
@@ -18,7 +18,7 @@ RSpec.describe AuthRoutes, type: :routes do
     context 'invalid auth token' do
       it 'returns an error' do
         header 'Authorization', 'invalid'
-        post '/v1'
+        post '/'
 
         expect(last_response.status).to eq(403)
       end
@@ -26,7 +26,7 @@ RSpec.describe AuthRoutes, type: :routes do
 
     context 'missing auth token' do
       it 'returns an error' do
-        post '/v1'
+        post '/'
 
         expect(last_response.status).to eq(403)
       end
