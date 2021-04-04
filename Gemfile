@@ -10,6 +10,7 @@ gem 'sinatra-contrib'
 gem 'config'
 gem 'puma'
 
+gem 'bunny'
 gem 'pg'
 gem 'sequel'
 
