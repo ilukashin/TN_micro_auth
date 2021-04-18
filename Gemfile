@@ -10,6 +10,9 @@ gem 'sinatra-contrib'
 gem 'config'
 gem 'puma'
 
+gem 'rack-ougai'
+gem 'rack-request-id'
+
 gem 'bunny'
 gem 'pg'
 gem 'sequel'
